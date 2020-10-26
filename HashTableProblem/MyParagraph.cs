@@ -4,12 +4,12 @@ using System.Text;
 
 namespace HashTableProblem
 {
-    public class MySentence
+    public class MyParagraph
     {
         private string[] words;
         MyMapNode<int, string> myMapNodeObj;
         int keyNo = 0;
-        public MySentence(string sentence)
+        public MyParagraph(string sentence)
         {
             words = sentence.Split(' ');
             myMapNodeObj = new MyMapNode<int, string>(words.Length);
