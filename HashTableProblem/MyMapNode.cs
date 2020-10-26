@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HashTableProblem
 {
-    class MyMapNode<K, V>
+    public class MyMapNode<K, V>
     {
         private readonly int size;
         private readonly LinkedList<KeyValue<K, V>>[] items;
@@ -23,13 +23,11 @@ namespace HashTableProblem
             }
             return linkedList;
         }
-        //To get the index value with the help of key
         protected int GetArrayPosition(K key)
         {
             int position = key.GetHashCode() % size;
             return Math.Abs(position);
         }
-        //To get the value with the help of key
         public V Get(K key)
         {
             int position = GetArrayPosition(key);
