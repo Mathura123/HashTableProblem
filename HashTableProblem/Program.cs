@@ -13,6 +13,13 @@ namespace HashTableProblem
                 "they keep putting themselves deliberately into paranoid " +
                 "avoidable situations");
             myParaObj.GetFrequency("paranoid");
+            Console.WriteLine("\nSentence before removal");
+            Console.WriteLine("-----------------------");
+            myParaObj.DisplaySentence();
+            myParaObj.Remove("avoidable");
+            Console.WriteLine("\nSentence after removal");
+            Console.WriteLine("----------------------");
+            myParaObj.DisplaySentence();
         }
     }
 }
